@@ -12,19 +12,7 @@ services:
     - 8081:8085
     networks:
       wildfly_network:
-
-  wildfly2:
-    build: 
-      context: .
-      args:
-        WILDFLY_NAME: wildfly_2
-        CLUSTER_PW: secret_password
-    image: wildfly_2
-    ports:
-    - 8082:8085
-    networks:
-      wildfly_network:
-
+      
 networks:
   wildfly_network:
     ipam:
